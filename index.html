@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brooke's Student Portal</title>
+  <style>
+    body { font-family: 'Helvetica Neue', sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+    header { background: #111; color: #fff; padding: 20px; text-align: center; }
+    section { padding: 20px; }
+    .payment-status { margin-bottom: 30px; }
+    .progress-bar { width: 100%; background: #ddd; border-radius: 20px; overflow: hidden; margin: 10px 0; }
+    .progress { height: 20px; background: #4caf50; width: 70%; }
+    .positive { color: green; }
+    .negative { color: red; }
+    button { background: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #45a049; }
+    .academic-progress, .payment-options { margin-top: 40px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+    th { background-color: #4caf50; color: white; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Brooke's Student Portal</h1>
+</header>
+
+<section class="payment-status">
+  <h2>Tuition Payment Status</h2>
+  <p>Total Program Balance: <strong>$12,000</strong></p>
+  <p>Amount Due This Semester: <strong>$2,000</strong></p>
+  <p>Current Balance: <span class="negative">$500 Past Due</span></p>
+
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+
+  <button onclick="window.location.href='https://pay.lafilmtuition.online'">Make a Payment</button>
+</section>
+
+<section class="payment-options">
+  <h2>Payment Plan Options</h2>
+  <ul>
+    <li>✔️ Pay Full Program Balance</li>
+    <li>✔️ Pay Full $2,000 Semester Balance</li>
+    <li>✔️ Make Smaller Flexible Payments</li>
+  </ul>
+</section>
+
+<section class="academic-progress">
+  <h2>Academic Progress</h2>
+  <p>Current Class: Pitching & Creating a Documentary Pitch Package</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Assignment</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Points (out of 100)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Documentary Concept Outline</td>
+        <td>Friday</td>
+        <td>Submitted</td>
+        <td>95</td>
+      </tr>
+      <tr>
+        <td>Pitch Package Elements</td>
+        <td>Monday</td>
+        <td>Pending</td>
+        <td>--</td>
+      </tr>
+      <tr>
+        <td>Final Pitch Submission</td>
+        <td>Next Friday</td>
+        <td>Pending</td>
+        <td>--</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><em>Note: Assignments submitted late will have 20 points automatically deducted.</em></p>
+</section>
+
+<section class="notice">
+  <h2>Account Hold Notice</h2>
+  <p><strong>Immediate Action Required*</strong><br><br>
+  Dear Brooke,<br>
+  Please be advised that due to outstanding payments and a current past-due balance of $500.00, a temporary hold will be placed on your account until the balance is settled.
+  We want to reassure you that your academic performance is exceeding expectations.
+  For assistance with your payment plan, please contact your financial advisor. We also encourage you to consider enrolling in our auto-pay billing system for convenient monthly payments.<br><br>
+  Sincerely,<br>
+  The LA Film School Team.
+  </p>
+</section>
+
+</body>
+</html>
