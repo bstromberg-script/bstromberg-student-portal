@@ -3,155 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Film School Student Portal - Brooke Stromberg</title>
+  <title>La Film School - Pitching A Script II Portal</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+      padding: 20px;
     }
     header, footer {
-      background-color: #000;
+      background-color: #1a1a1a;
+      padding: 20px;
       text-align: center;
-    }
-    header img, footer img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-    }
-    .logo {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 80px;
+      font-weight: bold;
+      font-size: 1.2em;
     }
     .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
+      max-width: 800px;
+      margin: 40px auto;
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
-    h1, h2 {
-      color: #222;
+    h1, h2, h3 {
+      color: #00bcd4;
     }
-    .balance {
-      background: #e0ffe0;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
+    .info {
+      margin-bottom: 30px;
     }
-    .past-due {
-      background: #ffe0e0;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    .progress-bar {
-      width: 100%;
-      background-color: #ddd;
-      border-radius: 20px;
-      overflow: hidden;
-      margin-bottom: 20px;
-    }
-    .progress {
-      height: 20px;
-      background-color: #4caf50;
-      width: 20%; /* Example: Set to 20% paid */
-    }
-    .academic {
-      background: #fff;
+    .upload-section {
+      background: #292929;
       padding: 20px;
       border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
+    input[type="file"] {
+      display: block;
+      margin: 20px 0;
     }
-    th, td {
-      padding: 10px;
-      border: 1px solid #ccc;
-      text-align: left;
-    }
-    .stripe-button {
+    .uploaded-files {
       margin-top: 20px;
-      text-align: center;
+      list-style: none;
+      padding-left: 0;
+    }
+    .uploaded-files li {
+      background: #383838;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      color: #d4d4d4;
+    }
+    button {
+      background-color: #00bcd4;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0097a7;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="/mnt/data/2e09d68a17b879daa944ec81576fb814.jpg" alt="Header Image">
-  <img class="logo" src="/mnt/data/OIP.jpg" alt="Logo">
+  La Film School - Student Portal
 </header>
 
 <div class="container">
-
-  <h1>Welcome, Brooke Stromberg!</h1>
-
-  <div class="balance">
-    <h2>Current Balance</h2>
-    <p><strong>Total Program Balance:</strong> $7,650</p>
-    <p><strong>Amount Due This Semester:</strong> $1,650 (Due by May 27th)</p>
+  <h1>Pitching A Script II - Class Portal</h1>
+  <div class="info">
+    <p><strong>Program:</strong> Writing for TV and Film - Bachelor of Science - Year 2</p>
+    <p><strong>Student:</strong> Brooke Stromberg</p>
+    <p><strong>Academic Progress:</strong> 95%</p>
+    <p><strong>Attendance:</strong> 90%</p>
+    <p><strong>Current Project:</strong> Documentary Pitch Package</p>
   </div>
 
-  <div class="progress-bar">
-    <div class="progress" style="width: 20%;"></div>
+  <div class="upload-section">
+    <h2>Assignment Upload</h2>
+    <p>Upload your completed assignments here. (Due dates: Every Friday and Monday)</p>
+    <input type="file" id="fileUpload">
+    <button onclick="uploadFile()">Upload</button>
+    <ul id="fileList" class="uploaded-files"></ul>
   </div>
-
-  <div class="stripe-button">
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-    <stripe-buy-button
-      buy-button-id="buy_btn_1RDklYRxg9anhw5eSakxJv8m"
-      publishable-key="pk_live_51R1bonRxg9anhw5eUreumqGfnn13Zzmub6zpBZb0yIlPvTDrP3jZPb0OZvEBnojyMUxjCJauLciplgKXMcvuQgwk00FpYSIghJ">
-    </stripe-buy-button>
-  </div>
-
-  <div class="academic">
-    <h2>Academic Progress</h2>
-    <p>Current Course: Pitching & Creating a Documentary Package</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Assignment</th>
-          <th>Due Date</th>
-          <th>Status</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Documentary Idea Pitch</td>
-          <td>Friday</td>
-          <td>Submitted</td>
-          <td>95/100</td>
-        </tr>
-        <tr>
-          <td>Visual Deck</td>
-          <td>Monday</td>
-          <td>Pending</td>
-          <td>--</td>
-        </tr>
-      </tbody>
-    </table>
-    <p><em>*Note: Late submissions deduct 20 points.*</em></p>
-  </div>
-
-  <div class="past-due">
-    <h2>Immediate Action Required*</h2>
-    <p><strong>Dear Brooke,</strong><br>
-    Please be advised that due to outstanding payments and a current past-due balance of $500.00, a temporary hold will be placed on your account until the balance is settled. We want to reassure you that your academic performance is exceeding expectations. For assistance with your payment plan, please contact your financial advisor. We also encourage you to consider enrolling in our auto-pay billing system for convenient monthly payments.
-    <br><br><strong>Sincerely,</strong><br>The LA Film School Team</p>
-  </div>
-
 </div>
 
 <footer>
-  <img src="/mnt/data/festival_cover_photo_cropped_18b0c4.webp" alt="Footer Image">
+  &copy; 2025 The Los Angeles Film School | Brooke Stromberg Portal
 </footer>
+
+<script>
+  function uploadFile() {
+    const fileInput = document.getElementById('fileUpload');
+    const fileList = document.getElementById('fileList');
+    if (fileInput.files.length > 0) {
+      const fileName = fileInput.files[0].name;
+      const listItem = document.createElement('li');
+      listItem.textContent = fileName + " (uploaded successfully)";
+      fileList.appendChild(listItem);
+      fileInput.value = "";
+    } else {
+      alert("Please select a file first.");
+    }
+  }
+</script>
 
 </body>
 </html>
