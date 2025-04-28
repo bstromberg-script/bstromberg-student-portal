@@ -3,101 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brooke's Student Portal</title>
+  <title>La Film School Student Portal - Brooke Stromberg</title>
   <style>
-    body { font-family: 'Helvetica Neue', sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-    header { background: #111; color: #fff; padding: 20px; text-align: center; }
-    section { padding: 20px; }
-    .payment-status { margin-bottom: 30px; }
-    .progress-bar { width: 100%; background: #ddd; border-radius: 20px; overflow: hidden; margin: 10px 0; }
-    .progress { height: 20px; background: #4caf50; width: 70%; }
-    .positive { color: green; }
-    .negative { color: red; }
-    button { background: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-    button:hover { background: #45a049; }
-    .academic-progress, .payment-options { margin-top: 40px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-    th { background-color: #4caf50; color: white; }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header, footer {
+      background-color: #000;
+      text-align: center;
+    }
+    header img, footer img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 80px;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    .balance {
+      background: #e0ffe0;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .past-due {
+      background: #ffe0e0;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .progress-bar {
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .progress {
+      height: 20px;
+      background-color: #4caf50;
+      width: 20%; /* Example: Set to 20% paid */
+    }
+    .academic {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    .stripe-button {
+      margin-top: 20px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Brooke's Student Portal</h1>
+  <img src="/mnt/data/2e09d68a17b879daa944ec81576fb814.jpg" alt="Header Image">
+  <img class="logo" src="/mnt/data/OIP.jpg" alt="Logo">
 </header>
 
-<section class="payment-status">
-  <h2>Tuition Payment Status</h2>
-  <p>Total Program Balance: <strong>$12,000</strong></p>
-  <p>Amount Due This Semester: <strong>$2,000</strong></p>
-  <p>Current Balance: <span class="negative">$500 Past Due</span></p>
+<div class="container">
 
-  <div class="progress-bar">
-    <div class="progress"></div>
+  <h1>Welcome, Brooke Stromberg!</h1>
+
+  <div class="balance">
+    <h2>Current Balance</h2>
+    <p><strong>Total Program Balance:</strong> $7,650</p>
+    <p><strong>Amount Due This Semester:</strong> $1,650 (Due by May 27th)</p>
   </div>
 
-  <button onclick="window.location.href='https://pay.lafilmtuition.online'">Make a Payment</button>
-</section>
+  <div class="progress-bar">
+    <div class="progress" style="width: 20%;"></div>
+  </div>
 
-<section class="payment-options">
-  <h2>Payment Plan Options</h2>
-  <ul>
-    <li>✔️ Pay Full Program Balance</li>
-    <li>✔️ Pay Full $2,000 Semester Balance</li>
-    <li>✔️ Make Smaller Flexible Payments</li>
-  </ul>
-</section>
+  <div class="stripe-button">
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1RDklYRxg9anhw5eSakxJv8m"
+      publishable-key="pk_live_51R1bonRxg9anhw5eUreumqGfnn13Zzmub6zpBZb0yIlPvTDrP3jZPb0OZvEBnojyMUxjCJauLciplgKXMcvuQgwk00FpYSIghJ">
+    </stripe-buy-button>
+  </div>
 
-<section class="academic-progress">
-  <h2>Academic Progress</h2>
-  <p>Current Class: Pitching & Creating a Documentary Pitch Package</p>
+  <div class="academic">
+    <h2>Academic Progress</h2>
+    <p>Current Course: Pitching & Creating a Documentary Package</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Assignment</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Documentary Idea Pitch</td>
+          <td>Friday</td>
+          <td>Submitted</td>
+          <td>95/100</td>
+        </tr>
+        <tr>
+          <td>Visual Deck</td>
+          <td>Monday</td>
+          <td>Pending</td>
+          <td>--</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><em>*Note: Late submissions deduct 20 points.*</em></p>
+  </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Assignment</th>
-        <th>Due Date</th>
-        <th>Status</th>
-        <th>Points (out of 100)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Documentary Concept Outline</td>
-        <td>Friday</td>
-        <td>Submitted</td>
-        <td>95</td>
-      </tr>
-      <tr>
-        <td>Pitch Package Elements</td>
-        <td>Monday</td>
-        <td>Pending</td>
-        <td>--</td>
-      </tr>
-      <tr>
-        <td>Final Pitch Submission</td>
-        <td>Next Friday</td>
-        <td>Pending</td>
-        <td>--</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="past-due">
+    <h2>Immediate Action Required*</h2>
+    <p><strong>Dear Brooke,</strong><br>
+    Please be advised that due to outstanding payments and a current past-due balance of $500.00, a temporary hold will be placed on your account until the balance is settled. We want to reassure you that your academic performance is exceeding expectations. For assistance with your payment plan, please contact your financial advisor. We also encourage you to consider enrolling in our auto-pay billing system for convenient monthly payments.
+    <br><br><strong>Sincerely,</strong><br>The LA Film School Team</p>
+  </div>
 
-  <p><em>Note: Assignments submitted late will have 20 points automatically deducted.</em></p>
-</section>
+</div>
 
-<section class="notice">
-  <h2>Account Hold Notice</h2>
-  <p><strong>Immediate Action Required*</strong><br><br>
-  Dear Brooke,<br>
-  Please be advised that due to outstanding payments and a current past-due balance of $500.00, a temporary hold will be placed on your account until the balance is settled.
-  We want to reassure you that your academic performance is exceeding expectations.
-  For assistance with your payment plan, please contact your financial advisor. We also encourage you to consider enrolling in our auto-pay billing system for convenient monthly payments.<br><br>
-  Sincerely,<br>
-  The LA Film School Team.
-  </p>
-</section>
+<footer>
+  <img src="/mnt/data/festival_cover_photo_cropped_18b0c4.webp" alt="Footer Image">
+</footer>
 
 </body>
 </html>
