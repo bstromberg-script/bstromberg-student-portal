@@ -3,115 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Film School - Pitching A Script II Portal</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #0e0e0e;
-      color: #f0f0f0;
-      padding: 20px;
-    }
-    header, footer {
-      background-color: #1a1a1a;
-      padding: 20px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #1e1e1e;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    }
-    h1, h2, h3 {
-      color: #00bcd4;
-    }
-    .info {
-      margin-bottom: 30px;
-    }
-    .upload-section {
-      background: #292929;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    input[type="file"] {
-      display: block;
-      margin: 20px 0;
-    }
-    .uploaded-files {
-      margin-top: 20px;
-      list-style: none;
-      padding-left: 0;
-    }
-    .uploaded-files li {
-      background: #383838;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      color: #d4d4d4;
-    }
-    button {
-      background-color: #00bcd4;
-      border: none;
-      padding: 10px 20px;
-      color: white;
-      font-size: 1em;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0097a7;
-    }
-  </style>
+  <title>LA Film School Student Portal - Brooke Stromberg</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <img src="/path/to/your/logo.jpg" alt="LA Film School Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Tuition and Fees</a></li>
+        <li><a href="class-portal.html">Class Portal</a></li>
+        <li><a href="program.html">Program Info</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  La Film School - Student Portal
-</header>
+  <main>
+    <section id="payment">
+      <h1>Make a Payment</h1>
+      <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RDklYRxg9anhw5eSakxJv8m"
+        publishable-key="pk_live_51R1bonRxg9anhw5eUreumqGfnn13Zzmub6zpBZb0yIlPvTDrP3jZPb0OZvEBnojyMUxjCJauLciplgKXMcvuQgwk00FpYSIghJ">
+      </stripe-buy-button>
+    </section>
 
-<div class="container">
-  <h1>Pitching A Script II - Class Portal</h1>
-  <div class="info">
-    <p><strong>Program:</strong> Writing for TV and Film - Bachelor of Science - Year 2</p>
-    <p><strong>Student:</strong> Brooke Stromberg</p>
-    <p><strong>Academic Progress:</strong> 95%</p>
-    <p><strong>Attendance:</strong> 90%</p>
-    <p><strong>Current Project:</strong> Documentary Pitch Package</p>
-  </div>
+    <section id="balances">
+      <h2>Current Balance</h2>
+      <p>Program Total Balance: <strong>$7,650</strong></p>
+      <p>Semester Balance Due: <strong>$1,650</strong> by <strong>May 27th</strong></p>
+    </section>
 
-  <div class="upload-section">
-    <h2>Assignment Upload</h2>
-    <p>Upload your completed assignments here. (Due dates: Every Friday and Monday)</p>
-    <input type="file" id="fileUpload">
-    <button onclick="uploadFile()">Upload</button>
-    <ul id="fileList" class="uploaded-files"></ul>
-  </div>
-</div>
+    <section id="delinquent">
+      <h2>Delinquent Student Accounts</h2>
+      <p>Monthly past due notices are sent to students who have outstanding balances. If a balance reaches $3,500 or more and is 60 days past due, the account is considered delinquent. Students will receive four notices. After the final notice, if unresolved, the school will determine withdrawal from the program.</p>
+    </section>
 
-<footer>
-  &copy; 2025 The Los Angeles Film School | Brooke Stromberg Portal
-</footer>
+    <section id="financial-aid">
+      <h2>Financial Aid</h2>
+      <p>Grants are available covering approximately 75% of tuition. This reduces student out-of-pocket costs to about $2,000 per semester.</p>
+    </section>
 
-<script>
-  function uploadFile() {
-    const fileInput = document.getElementById('fileUpload');
-    const fileList = document.getElementById('fileList');
-    if (fileInput.files.length > 0) {
-      const fileName = fileInput.files[0].name;
-      const listItem = document.createElement('li');
-      listItem.textContent = fileName + " (uploaded successfully)";
-      fileList.appendChild(listItem);
-      fileInput.value = "";
-    } else {
-      alert("Please select a file first.");
-    }
-  }
-</script>
+    <section id="tuition-breakdown">
+      <h2>Tuition & Fees Breakdown</h2>
+      <ul>
+        <li>Full Tuition: $77,500 (before grants)</li>
+        <li>Grants Estimated: ~$58,000</li>
+        <li>Remaining Student Responsibility: ~$19,500</li>
+        <li>Cost Per Semester: ~$2,000</li>
+        <li>Semester Duration: 16 Weeks</li>
+      </ul>
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Brooke Stromberg | LA Film School Student Portal</p>
+  </footer>
 </body>
 </html>
